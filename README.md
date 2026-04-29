@@ -70,14 +70,23 @@ npm run dev
 ```
 The app will be available at `http://localhost:5173` (or the port specified by Vite).
 
-## 📸 Screenshots
+## 📸 Visual Showcase
 
-*(Screenshots will be added here)*
+### 🔐 Login Page
+![Login Page](screenshots/login.png)
+*A sleek, minimal entrance with blueprint-inspired design and secure JWT authentication.*
 
-- **Login Page**: A sleek, minimal entrance with blueprint aesthetic.
-- **Dashboard**: High-level overview with bento-style analytics.
-- **Leads Table**: Clean, sortable list of all active leads.
-- **Lead Detail**: Deep dive into activity history and file attachments.
+### 📊 Professional Dashboard
+![Dashboard](screenshots/dashboard.png)
+*Bento-style analytics with real-time performance charts and one-click data refresh.*
+
+### 👥 Leads Management
+![Leads Page](screenshots/leads.png)
+*Comprehensive lead tracking with status filters, user assignment, and follow-up reminders.*
+
+### 📝 Lead Detail & Timeline
+![Lead Detail](screenshots/detail.png)
+*Deep dive into lead history with activity logs and file attachments.*
 
 ---
 Developed with ❤️ for a professional CRM experience.
