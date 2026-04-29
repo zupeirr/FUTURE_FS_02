@@ -15,6 +15,7 @@ class Lead extends Model {
   public followUpDate!: Date | null;
 }
 
+
 Lead.init(
   {
     id: {
