@@ -8,7 +8,7 @@ const secret = process.env.JWT_SECRET || 'super_secret_jwt_key_12345';
 export const register = async (req: Request, res: Response): Promise<void> => {
   try {
     const { email, password, name } = req.body;
-    
+
     // Check if user exists
     const existingUser = await User.findOne({ where: { email } });
     if (existingUser) {
@@ -28,7 +28,7 @@ export const register = async (req: Request, res: Response): Promise<void> => {
     });
 
     const token = jwt.sign({ id: newUser.id, role: newUser.role }, secret, { expiresIn: '15d' });
-    
+
     res.status(201).json({
       access_token: token,
       user: { id: newUser.id, email: newUser.email, name: newUser.name, role: newUser.role }
@@ -41,7 +41,7 @@ export const register = async (req: Request, res: Response): Promise<void> => {
 export const login = async (req: Request, res: Response): Promise<void> => {
   try {
     const { email, password } = req.body;
-    
+
     const user = await User.findOne({ where: { email } });
     if (!user) {
       res.status(401).json({ error: 'Invalid credentials' });
@@ -55,7 +55,7 @@ export const login = async (req: Request, res: Response): Promise<void> => {
     }
 
     const token = jwt.sign({ id: user.id, role: user.role }, secret, { expiresIn: '15d' });
-    
+
     res.status(200).json({
       access_token: token,
       user: { id: user.id, email: user.email, name: user.name, role: user.role }
@@ -75,7 +75,7 @@ export const getSession = async (req: Request, res: Response): Promise<void> => 
 
     const token = authHeader.split(' ')[1];
     const decoded = jwt.verify(token, secret) as any;
-    
+
     const user = await User.findByPk(decoded.id);
     if (!user) {
       res.status(401).json({ error: 'User not found' });
