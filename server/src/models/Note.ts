@@ -61,3 +61,4 @@ User.hasMany(Note, { foreignKey: 'created_by', as: 'notes' });
 Note.belongsTo(User, { foreignKey: 'created_by', as: 'author' });
 
 export default Note;
+
