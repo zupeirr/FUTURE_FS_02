@@ -89,4 +89,9 @@ The app will be available at `http://localhost:5173` (or the port specified by V
 *Deep dive into lead history with activity logs and file attachments.*
 
 ---
-Developed with ❤️ for a professional CRM experience.
+##  Project Information
+- **Developer:** [Suber Sulub](https://github.com/zupeirr)
+- **Project Name:** CRM Fullstack
+- **Program:** Future Intern
+- **Task:** Sec Task – Mini CRM - Full-Stack Lead Management System
+- **CIN ID:** FIT/APR26/FS14947

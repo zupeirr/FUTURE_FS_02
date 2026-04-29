@@ -14,7 +14,7 @@ async function createTestUser() {
         role: 'admin'
       }
     });
-    
+
     if (created) {
       console.log('Test user created: admin@crm.com / password123');
     } else {
