@@ -35,7 +35,7 @@ async function startServer() {
   try {
     await sequelize.authenticate();
     console.log('Database connection has been established successfully.');
-    
+
     // Sync models (in production, use migrations)
     await sequelize.sync({ alter: true });
     console.log('Database models synchronized.');
@@ -49,3 +49,4 @@ async function startServer() {
 }
 
 startServer();
+
